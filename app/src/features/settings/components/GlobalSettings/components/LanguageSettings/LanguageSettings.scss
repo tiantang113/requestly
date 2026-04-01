@@ -1,0 +1,43 @@
+.language-settings-container {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+  .settings-header {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .settings-caption {
+    margin-bottom: 1.5rem;
+    color: var(--text-gray);
+  }
+  
+  .language-selector-wrapper {
+    max-width: 400px;
+    
+    .language-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    
+    .language-selector {
+      width: 100%;
+    }
+    
+    .language-info {
+      margin-top: 1rem;
+      
+      p {
+        margin: 0;
+      }
+      
+      .mt-8 {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

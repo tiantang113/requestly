@@ -100,7 +100,17 @@
     "keyboardShortcuts": "Keyboard Shortcuts",
     "extensions": "Extensions",
     "proxy": "Proxy",
-    "about": "About"
+    "about": "About",
+    "globalSettings": "Global Settings",
+    "globalSettingsCaption": "Please enable the following settings to get the best experience",
+    "languageSettings": "Language Settings",
+    "languageSelectorLabel": "Application Language",
+    "languageInfo": "Current language: <strong>{{language}}</strong>",
+    "languagePersistInfo": "The language preference is saved locally and will persist across sessions.",
+    "rulesSyncing": "Rules Syncing",
+    "dataCollection": "Data Collection",
+    "blockList": "Block List",
+    "popupConfig": "Popup Config"
   },
   "workspace": {
     "title": "Workspace",
@@ -155,5 +165,11 @@
     "maxLength": "Length must not exceed {{max}} characters",
     "pattern": "Invalid format",
     "duplicate": "Already exists, please use another name"
+  },
+  "languages": {
+    "english": "English",
+    "chinese": "Chinese",
+    "englishNative": "English",
+    "chineseNative": "简体中文"
   }
 }

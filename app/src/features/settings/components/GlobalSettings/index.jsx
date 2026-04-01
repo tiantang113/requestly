@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { getAppMode } from "store/selectors";
 import { getUserAuthDetails } from "store/slices/global/user/selectors";
 import InstallExtensionCTA from "../../../../components/misc/InstallExtensionCTA";
@@ -15,10 +16,12 @@ import { BlockList } from "./components/BlockListSettings/BlockListSettings";
 import { SafariLimitedSupportView } from "componentsV2/SafariExtension/SafariLimitedSupportView";
 import { PopupConfig } from "./components/PopupConfig/PopupConfig";
 import { AIConsentSetting } from "./components/AIConsentSetting/AIConsentSetting";
+import { LanguageSettings } from "./components/LanguageSettings/LanguageSettings";
 
 export const GlobalSettings = () => {
   const user = useSelector(getUserAuthDetails);
   const appMode = useSelector(getAppMode);
+  const { t } = useTranslation();
 
   const isImplicitTestThisRuleCompatible = useMemo(
     () => isFeatureCompatible(APP_CONSTANTS.FEATURES.IMPLICIT_TEST_THIS_RULE),
@@ -37,11 +40,12 @@ export const GlobalSettings = () => {
   return (
     <div className="global-settings-container">
       <div className="global-settings-wrapper">
-        <div className="settings-header header">⚙️ Global Settings</div>
+        <div className="settings-header header">{t('settings.globalSettings')}</div>
         <p className="text-gray text-sm settings-caption">
-          Please enable the following settings to get the best experience
+          {t('settings.globalSettingsCaption')}
         </p>
         <div>
+          <LanguageSettings />
           <RulesSyncing />
           {user?.loggedIn ? <DataCollection /> : null}
         </div>
