@@ -100,7 +100,17 @@
     "keyboardShortcuts": "键盘快捷键",
     "extensions": "扩展",
     "proxy": "代理",
-    "about": "关于"
+    "about": "关于",
+    "globalSettings": "全局设置",
+    "globalSettingsCaption": "请启用以下设置以获得最佳体验",
+    "languageSettings": "语言设置",
+    "languageSelectorLabel": "应用语言",
+    "languageInfo": "当前语言：<strong>{{language}}</strong>",
+    "languagePersistInfo": "语言偏好设置将保存在本地并在各会话间保持。",
+    "rulesSyncing": "规则同步",
+    "dataCollection": "数据收集",
+    "blockList": "阻止列表",
+    "popupConfig": "弹窗配置"
   },
   "workspace": {
     "title": "工作空间",
@@ -155,5 +165,11 @@
     "maxLength": "长度不能超过 {{max}} 个字符",
     "pattern": "格式不正确",
     "duplicate": "已存在，请使用其他名称"
+  },
+  "languages": {
+    "english": "英语",
+    "chinese": "中文",
+    "englishNative": "English",
+    "chineseNative": "简体中文"
   }
 }

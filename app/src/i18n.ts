@@ -12,11 +12,16 @@ const resources = {
   },
 };
 
+// Get saved language from localStorage or default to 'en'
+const savedLanguage = typeof window !== 'undefined' 
+  ? localStorage.getItem('appLanguage') || 'en' 
+  : 'en';
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en',
+    lng: savedLanguage,
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
@@ -26,5 +31,10 @@ i18n
       caches: ['localStorage'],
     },
   });
+
+// Update HTML lang attribute on initialization
+if (typeof document !== 'undefined') {
+  document.documentElement.lang = savedLanguage;
+}
 
 export default i18n;
