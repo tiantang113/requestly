@@ -13,6 +13,7 @@ export interface GlobalSliceState {
   syncingV2: boolean;
   bottomSheetOrientation: BottomSheetOrientation;
   isExtensionEnabled: boolean;
+  appLanguage: string;
   pendingRefresh: {
     rules: boolean;
     sharedLists: boolean;
